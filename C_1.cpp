@@ -27,11 +27,7 @@ void pad_right(char* s, int n)
 {
 	int t = 0;
 	while (*(s + t) != '\0') t++;
-	if (t < n) for (int i = t; i < n; i++)
-	{
-		*(s + i) = '_';
-		*(s + i + 1) = '\0';
-	}
+	if (t < n) {for (int i = t; i < n; i++) *(s + i) = '_'; *(s + n) = '\0';}
 }
 void pad_left(char* s, int n)
 {
